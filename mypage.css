@@ -1,0 +1,20 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  text-align: center;
+  background-color: beige;
+  height: 100px;
+}
+.rigth-profile{
+    
+}
+.profile {
+  border-radius: 50%; /* 원형으로 설정 */
+  width: 150px; /* 너비를 150px로 설정 */
+  height: 150px; /* 높이를 150px로 설정 */
+  /*border: 3px solid #474747; /* 테두리를 3px 두께의 어두운 회색으로 설정 */
+  margin-bottom: 1rem; /* 아래쪽 여백을 1rem으로 설정 */
+  transition: transform 0.3s; /* 변환 효과 설정 */
+}

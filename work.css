@@ -1,15 +1,14 @@
-/* 전체 페이지의 기본 스타일 설정 */
 body {
-  font-family: 'Roboto', sans-serif; /* 페이지 전체의 글꼴을 'Roboto'로 설정 */
-  margin: 0; /* 기본 여백을 0으로 설정 */
-  padding: 0; /* 기본 패딩을 0으로 설정 */
-  background-color: #f0f2f5; /* 페이지 배경색을 연한 회색으로 설정 */
-  color: #333; /* 글자 색상을 어두운 회색으로 설정 */
+  font-family: 'Roboto', sans-serif;
+  margin: 0; 
+  padding: 0;
+  background-color: #f0f2f5;
+  color: #333; 
 }
 
 /* 헤더 스타일 설정 */
 header {
-  background: linear-gradient(to right, #ffb6c1, #ffb6c1); /* 오른쪽으로 흐르는 분홍색 그라디언트 배경 */
+  background: linear-gradient(to right,rgb(0.255.13), #000000); /* 오른쪽으로 흐르는 분홍색 그라디언트 배경 */
   color: #fff; /* 글자 색상을 흰색으로 설정 */
   padding: 2rem; /* 안쪽 여백을 2rem으로 설정 */
   text-align: center; /* 텍스트를 중앙 정렬 */
