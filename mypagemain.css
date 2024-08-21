@@ -13,7 +13,6 @@ body {
 
 /* 헤더 스타일 */
 header {
-
   height: 70px;
   background-color: #c18de4;
   display: flex;
@@ -21,10 +20,11 @@ header {
   align-items: center;
   padding: 10px;
   /* 헤더 위에 빈 공간 없애기 위해 margin-top 설정 */
-  margin-top: 0;
+  margin-top: 10px;
   /* 헤더 아래에 빈 공간이 생길 경우 margin-bottom 설정 */
   margin: 0;
 }
+
 
 h1 {
   flex: 1;
@@ -66,6 +66,8 @@ h1 {
   right: 20px;
 }
 
+
+
 /* 햄버거 아이콘 */
 #menu_hamburger span {
   display: block;
@@ -80,6 +82,8 @@ h1 {
               opacity 0.55s ease;
   z-index: 100;
 }
+
+
 
 #menu_hamburger span:first-child {
   transform-origin: 0% 0%;
@@ -113,6 +117,7 @@ h1 {
   padding-right: 0px;
   padding-left: 0px;
   padding-top: 80px;
+  
   background: #a8a8a8;
   list-style-type: none;
   transform-origin: 0% 0%;
@@ -146,12 +151,14 @@ label {
   transition: color 0.2s ease;
 }
 
-label:hover {
+label:hover{
   color: rgb(116, 175, 243);
+
 }
 
 .dropdown li {
   width: 100%;
+
 }
 
 .dropdown a {
@@ -174,11 +181,13 @@ label:hover {
   background-color: #757575; 
   padding: 0px;
   margin: 0px;
+
 }
 
 /* 하위 카테고리 항목의 호버 효과 */
 .submenu li:hover {
   background-color: #c0c0c0; /* 호버 시 배경색 */
+  
 }
 
 /* 드롭다운 기능: 클릭 시 하위 메뉴 표시 */
@@ -197,9 +206,12 @@ label:hover {
   transform: none;
 }
 
-body > nav {
+
+
+body > nav{
   position: fixed;
 }
+
 
 /* 목록 화면 오른쪽에 고정 */
 .recently-viewed {
@@ -217,8 +229,63 @@ body > nav {
 
 /* 목록 제목 */
 .recently-viewed h3 {
-  font-size: 14px
+  font-size: 14px; 
+  margin: 0; 
+  margin-bottom: 8px; 
 }
+
+/* 상품들 보이는 공간 */
+.recently-viewed ul {
+  list-style: none; /* 불릿 제거 */
+  padding: 0; 
+  margin: 0; 
+  max-height: 320px; 
+  overflow: hidden; 
+}
+
+/* 상품 */
+.recently-viewed ul li {
+  margin-bottom: 5px;
+}
+
+/* 마지막 상품 항목의 여백 제거 */
+.recently-viewed ul li:last-child {
+  margin-bottom: 0; /* 마지막 항목의 하단 여백 제거 */
+}
+
+/* 상품 링크 */
+.recently-viewed ul li a {
+  display: block; /* 이미지 전체 클릭 가능 */
+}
+
+/* 상품 이미지 */
+.recently-viewed ul li img {
+  width: 100%; 
+  height: auto; /* 이미지 비율 유지하며 높이 자동 조정 */
+  border: 0px solid #ddd; 
+  border-radius: 4px; /* 이미지 모서리를 둥글게 설정 */
+}
+
+/* 화살표 버튼 */
+.arrow {
+  cursor: pointer;
+  font-size: 20px;
+  margin: 3px 0;
+  color: #333;
+}
+
+/* 비활성화된 화살표 */
+.arrow.disabled {
+  color: #ccc; 
+  cursor: not-allowed; /* 커서 비활성화 */
+}
+
+/*삭제해도ㄱㅊ*/
+.a1111{
+height: 200vh;
+width: 30px;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -229,14 +296,11 @@ body > nav {
   background-color: #FFF6E9;
 }
 
-
 header h1 {
   font-size: 36px;
   font-weight: bold;
   margin: 0;
-  height: 150px;
 }
-
 .profile-section {
   display: flex;
   align-items: center;
@@ -323,4 +387,18 @@ a{
   padding: 30px;
   text-align: center;
   font-size: 18px;
+}
+
+
+
+/*👆top으로*/
+.totop {
+  position: fixed;
+  right: 77px;
+  bottom: 30px;
+}
+
+/*스크롤시 부드럽게*/
+html {
+  scroll-behavior: smooth;
 }

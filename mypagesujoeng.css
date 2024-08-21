@@ -9,7 +9,6 @@
 body {
   margin: 0;
   padding: 0;
-  height: 50%;
 }
 
 /* 헤더 스타일 */
@@ -282,19 +281,24 @@ body > nav{
   color: #ccc; 
   cursor: not-allowed; /* 커서 비활성화 */
 }
+
+
+
+
 /*삭제해도ㄱㅊ*/
 .a1111{
 height: 200vh;
 width: 30px;
 }
 
-.profile-section {
+.container {
+  margin-left: 250px;
+  margin-right: 250px;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .profile-image {
   position: relative;
   margin-bottom: 20px;
@@ -307,28 +311,27 @@ width: 30px;
   margin-bottom: 1rem; /* 아래쪽 여백을 1rem으로 설정 */
   transition: transform 0.3s; /* 변환 효과 설정 */
 }
-
 .change-photo-btn {
   margin-top: 10px;
   padding: 8px 16px;
-  background-color: #4c4eb8;
+  background-color: #0000009c;
   border: none;
   cursor: pointer;
   font-size: 14px;
   margin-left: 40px;
 }
-
 .profile-info {
-  background-color: #35659c;  
+  background-color: #ffffff;  
   padding: 20px;
   text-align: left;
-  width: 400px;
-}
-input{
-  width: 200px;
-  margin-left: 90px;
+  width: 980px;
+  margin-left: 670px;
 }
 
+input{
+  width: 300px;
+  display: flex;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -354,5 +357,43 @@ form input {
   cursor: pointer;
   font-size: 14px;
 }
+.wrap{
+  padding:10px;
+}
 
+.btn_open{
+  font-weight:bold;
+  margin:5px; 
+  padding:4px 6px; 
+  background:#789ace; 
+  color:#fff;
+  text-decoration-line: none;
+}
 
+.pop_wrap{
+  position:fixed; 
+  top:0; 
+  left:0; 
+  right:0; 
+  bottom:0; 
+  background:rgba(0,0,0,.5); 
+  font-size:0; 
+  text-align:center;
+}
+
+.pop_wrap:after{
+  display:inline-block; 
+  height:100%; 
+  vertical-align:middle; 
+  content:'';
+}
+
+.pop_wrap .pop_inner{
+  display:inline-block; 
+  padding:20px 30px; 
+  background:#fff; 
+  width:200px; 
+  vertical-align:middle; 
+  font-size:15px;
+
+}

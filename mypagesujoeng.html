@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/mypagesujoeng.css" />
+    <link rel="stylesheet" href="/mypagesujoeng.css"/>
 </head>
  <!--헤더, 로고-->
  <header>
@@ -124,37 +124,48 @@
         </div>
     </nav>
 
-    <div class="profile-section">
-      <div class="profile-image">
-          <div class="circle"> <img src="/img/빵귤.jpg" alt="프로필" class="profile"></div>
-          <button class="change-photo-btn">프로필사진 변경</button>
-      </div>
-      <div class="profile-info">
-          <form>
-              <label for="email">이메일</label>
-              <input type="email" id="email" name="email">
-              
-              <label for="name">이름</label>
-              <input type="text" id="name" name="name">
-              
-              <label for="nickname">닉네임</label>
-              <input type="text" id="nickname" name="nickname">
-              
-              <label for="phone">휴대폰</label>
-              <input type="text" id="phone" name="phone">
-              
-              <label for="address">주소</label>
-              <input type="text" id="address" name="address">
-              
-              <label for="birthdate">생년월일</label>
-              <input type="date" id="birthdate" name="birthdate">
-          </form>
-          <button class="button-sujoeng">수정완료</button>
-      </div>
-      
-  </div>
-</div>
-
+    <div class="container">
+        <div class="profile-image">
+            <div class="circle"> <img src="/img/빵귤.jpg" alt="프로필" class="profile"></div>
+            <button class="change-photo-btn">프로필사진 변경</button>
+        </div>
+        <div class="profile-info">
+            <form>
+                <label for="email">이메일:</label>
+                <input type="email" id="email" name="email">
+                
+                <label for="name">이름:</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="nickname">닉네임:</label>
+                <input type="text" id="nickname" name="nickname">
+                
+                <label for="phone">휴대폰:</label>
+                <input type="text" id="phone" name="phone">
+                
+                <label for="address">주소:</label>
+                <input type="text" id="address" name="address" style="width: 150px;" placeholder="우편번호">
+                
+                <input type="text" id="address" name="address" placeholder="주소">
+                <input type="text" id="address" name="address" placeholder="상세주소">
+                
+                <label for="birthdate">생년월일:</label>
+                <input type="date" id="birthdate" name="birthdate">
+                <div class="wrap">
+                  <a href="#pop_info_1" class="btn_open">수정 완료</a>
+                  
+                  <div id="pop_info_1" class="pop_wrap" style="display:none;">
+                    <div class="pop_inner">
+                      <p class="dsc">회원 수정이 완료 되었습니다람쥐.</p>
+                      <button type="button" class="btn_close">닫기</button>
+                    </div>
+                  </div>
+                
+            </form>   
+            
+        </div>
+        
+    </div>
 
   <!-- 최근본 -->
     <div class="recently-viewed">
@@ -213,7 +224,24 @@
         updateArrows(); // 초기 상태에서 화살표 상태 업데이트
     });
     
-    
+    var target = document.querySelectorAll('.btn_open');
+        var btnPopClose = document.querySelectorAll('.pop_wrap .btn_close');
+        var targetID;
+
+        // 팝업 열기
+        for(var i = 0; i < target.length; i++){
+        target[i].addEventListener('click', function(){
+            targetID = this.getAttribute('href');
+            document.querySelector(targetID).style.display = 'block';
+        });
+        }
+
+        // 팝업 닫기
+        for(var j = 0; j < target.length; j++){
+        btnPopClose[j].addEventListener('click', function(){
+            this.parentNode.parentNode.style.display = 'none';
+        });
+}
     
         </script>
 
