@@ -215,17 +215,24 @@ body > nav{
 }
 
 
+/*👀최근 본 상품*/
+
 /* 목록 화면 오른쪽에 고정 */
 .recently-viewed {
-  position: fixed;            /* 스크롤을 내려도 위치 고정 */
-  top: 50%;                   /* 전체 화면의 중앙에 위치 */
-  right: 0;                   /* 화면의 오른쪽 끝에 배치 */
-  transform: translateY(-50%); /* 스크롤 내려도 중앙정렬 유지 */
-  width: 100px;               /* 상품 목록 너비 */
-  background-color: #ffffff; 
-  border: 1px solid #000000; 
-  padding: 10px;              
-  z-index: 1000; 
+  /* 스크롤을 내려도 위치 고정 */
+  position: fixed;
+  /* 전체 화면의 중앙에 위치 */
+  top: 50%;
+  /* 화면의 오른쪽 끝에 배치 */
+  right: 50px;
+  /* 스크롤 내려도 중앙정렬 유지 */
+  transform: translateY(-50%);
+  /* 상품 목록 너비 */
+  width: 100px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  padding: 10px;
+  z-index: 1;
   text-align: center;
 }
 
@@ -282,15 +289,6 @@ body > nav{
   cursor: not-allowed; /* 커서 비활성화 */
 }
 
-
-
-
-/*삭제해도ㄱㅊ*/
-.a1111{
-height: 200vh;
-width: 30px;
-}
-
 .container {
   margin-left: 250px;
   margin-right: 250px;
@@ -323,9 +321,9 @@ width: 30px;
 .profile-info {
   background-color: #ffffff;  
   padding: 20px;
-  text-align: left;
-  width: 980px;
-  margin-left: 670px;
+  width: 400px;
+  border: 1px solid black;
+  align:left;
 }
 
 input{
@@ -341,6 +339,7 @@ form label {
   font-size: 16px;
   margin-bottom: 5px;
   font-weight: bold;
+  display: inline-block;
 }
 
 form input {
@@ -397,3 +396,14 @@ form input {
   font-size:15px;
 
 }
+/*👆top으로*/
+.totop {
+  position: fixed;
+  right: 77px;
+  bottom: 30px;
+}
+
+/*스크롤시 부드럽게*/
+html {
+  scroll-behavior: smooth;
+} 
